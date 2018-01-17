@@ -1,0 +1,55 @@
+<!-- begin types -->
+<div class="types">
+	<div class="types__inner">
+		<h2 class="types__title-md title-md"></h2>
+		<div class="types__wrap">
+			<div class="types__title"></div>
+			<div class="types__person">
+				<img src="./img/person.png" alt="person">
+			</div>
+			<div class="types__row">
+				{% set firstCol = [
+					{
+						title: 'ШТАТ',
+						text: 'Более 100 телохранителей, которые находятся по разным точкам Москвы и МО '
+					},
+					{
+						title: 'ОПЫТ',
+						text: 'Все наши сотрудники имеют огромный опыт службы в: ФСО, СОБР, ГРУ и т.д'
+					},
+					{
+						title: 'ОПЕРАТИВНОСТЬ',
+						text: 'Оперативный выезд телохранителя в течение 1 часа с момента заказа'
+					}
+				] %}
+				<div class="types__col">
+					{% for item in firstCol %}
+						<h4 class="types__title-sm title-sm">{{ item.title }}</h4>
+						<p>{{ item.text }}</p>
+					{% endfor %}
+				</div>
+				{% set secondCol = [
+					{
+						title: '24/7',
+						text: 'Работаем круглосуточно, поэтому наш консультант готов принять Ваш заказ в любое время дня и ночи'
+					},
+					{
+						title: 'ЛИЦЕНЗИЯ <br>НА ОРУЖИЕ',
+						text: 'Все телохранители оснащены оружием и рацией. Лицензии имеются.'
+					},
+					{
+						title: 'ДРЕСС-КОД',
+						text: 'Телохранители выезжают к клиенту в чистых черных костюмах с черным галстуком'
+					}
+				] %}
+				<div class="types__col">
+					{% for item in secondCol %}
+						<h4 class="types__title-sm title-sm">{{ item.title }}</h4>
+						<p>{{ item.text }}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end types -->
